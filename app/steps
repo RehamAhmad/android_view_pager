@@ -1,0 +1,22 @@
+Android view Pager
+1- add -> implementation 'com.google.android.material:material:1.2.0' dependency
+2- activity xml
+   build TabLayout from previous dependency
+   build ViewPager
+3- activity java --> con
+   find tabLayout byId
+   find ViewPager byId
+   add viewPager to TabLayout
+      tabLayout.setupWithViewPager(viewPager);
+4- create ViewPagerAdapter class
+   extends from FragmentPagerAdapter
+   override methods - constructor
+      getItem
+      getCount
+      add getPageTitle (optional)
+5- activity java
+   create object from adapter
+      ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+   set adapter to pageView
+      viewPager.setAdapter(adapter);
+-> Done
